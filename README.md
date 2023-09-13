@@ -54,3 +54,91 @@ Resposta de Exemplo:
     }
 ]
 ```
+
+
+### Criar Tarefa
+URL: /v1/Tarefas
+
+Método: POST
+
+Descrição: Cria uma nova tarefa.
+
+Corpo da Solicitação:
+```json
+{
+    "Title": "Ir à academia",
+    "Description": "Fazer exercícios na academia.",
+    "CreatedDate": "2023-09-12T08:00:00",
+    "Status": "Em Progresso"
+}
+
+```
+Exemplo de Solicitação:
+
+```http
+POST https://seu-domínio.com/v1/Tarefas
+Content-Type: application/json
+
+{
+    "Title": "Ir à academia",
+    "Description": "Fazer exercícios na academia.",
+    "CreatedDate": "2023-09-12T08:00:00",
+    "Status": "Em Progresso"
+}
+
+```
+
+Resposta de Exemplo:
+```json
+{
+    "Id": 3,
+    "Title": "Ir à academia",
+    "Description": "Fazer exercícios na academia.",
+    "CreatedDate": "2023-09-12T08:00:00",
+    "Status": "Em Progresso"
+}
+
+
+```
+### Atualizar Tarefa
+URL: /v1/Tarefas/{id:int}
+
+Método: PUT
+
+Descrição: Atualiza uma tarefa existente pelo seu ID.
+
+Corpo da Solicitação:
+
+```json
+{
+    "Title": "Ir à academia - Atualizado",
+    "Description": "Fazer exercícios na academia - Atualizado",
+    "CreatedDate": "2023-09-12T08:00:00",
+    "Status": "Concluída"
+}
+```
+Exemplo de Solicitação:
+
+```http
+PUT https://seu-domínio.com/v1/Tarefas/3
+Authorization: Bearer SUA_CHAVE_DE_API
+Content-Type: application/json
+
+{
+    "Title": "Ir à academia - Atualizado",
+    "Description": "Fazer exercícios na academia - Atualizado",
+    "CreatedDate": "2023-09-12T08:00:00",
+    "Status": "Concluída"
+}
+```
+Resposta de Exemplo:
+
+```json
+{
+    "Id": 3,
+    "Title": "Ir à academia - Atualizado",
+    "Description": "Fazer exercícios na academia - Atualizado",
+    "CreatedDate": "2023-09-12T08:00:00",
+    "Status": "Concluída"
+}
+```
