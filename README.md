@@ -142,3 +142,23 @@ Resposta de Exemplo:
     "Status": "Concluída"
 }
 ```
+
+### Excluir Tarefa
+URL: /v1/Tarefas/{id:int}
+
+Método: DELETE
+
+Descrição: Exclui uma tarefa pelo seu ID.
+
+Exemplo de Solicitação:
+
+```http
+DELETE https://seu-domínio.com/v1/Tarefas/3
+```
+Resposta de Exemplo:
+
+```json
+{
+    "mensagem": "Tarefa excluída com sucesso."
+}
+```
