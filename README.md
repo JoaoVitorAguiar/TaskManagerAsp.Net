@@ -7,7 +7,7 @@ Bem-vindo à documentação da API ASP.NET do TaskManager. Esta API permite gere
 
 Para testar esse projeto precisa baixar ele na sua máquina e fazer algumas alterações.
 
-Utilizei uma abordagem code first, ou seja, uma vez criado o modelo de dados e configurado o contextpo de dados, basta utilizar as migrações. Para isso o comando *update-database* no Package Manager console aplica essa migração.
+Utilizei uma abordagem code first, ou seja, uma vez criado o modelo de dados e configurado o contextpo de dados, basta utilizar as migrações. Para isso o comando *update-database* no Package Manager Console do Visual Studio aplica essa migração, e consequentemente cria ou autualiza o banco.
 
 Utilizei para o banco de dados o SqlServer, por isso a string de conexão deve ser modificada de acordo com as configurações do seu dispositivo. Para modificá-la basta ir em *appsettings.json*. E adequar o *DefaultConnection*.
 ```json
