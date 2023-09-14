@@ -36,16 +36,6 @@ A seguir estão as principais tecnologias e ferramentas utilizadas neste projeto
 - **SQL Server 16**
 
 
-## Como Executar o Projeto
-
-Para executar este projeto em sua máquina local, siga as etapas abaixo:
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/JoaoVitorAguiar/TaskManagerAsp.Net.git
-
-
 
 ## Modelos de Dados
 
