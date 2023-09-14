@@ -3,7 +3,7 @@
 Bem-vindo à documentação da API ASP.NET do TaskManager. Esta API permite gerenciar tarefas em uma aplicação de lista de afazeres. Ela oferece operações para listar, criar, atualizar e excluir tarefas.
 
 
-## CONFIGURAÇÃO
+## Configuração
 
 Para testar esse projeto precisa baixar ele na sua máquina e fazer algumas alterações.
 
