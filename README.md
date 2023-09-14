@@ -37,13 +37,13 @@ Este modelo é usado para criar ou atualizar uma tarefa.
     "Title": "string",
     "Description": "string",
     "CreatedDate": "datetime",
-    "Status": "string"
+    "Status": int
 }
 ```
 * Title (obrigatório, string): O título da tarefa.
 * Description (obrigatório, string): A descrição da tarefa.
 * CreatedDate (obrigatório, datetime): A data de criação da tarefa.
-* Status (obrigatório, string): O status da tarefa, deve ser um dos seguintes valores: "Pendente", "Em Progresso" ou "Concluída".
+* Status (obrigatório, int): O status da tarefa que é um enumerador, deve ser um dos seguintes valores: 0: "Pendente", 1: "Em Progresso" ou 2: "Concluída".
 
 ## Endpoints
 ### Listar Tarefas
@@ -65,14 +65,14 @@ Resposta de Exemplo:
         "Title": "Comprar leite",
         "Description": "Ir ao mercado e comprar leite.",
         "CreatedDate": "2023-09-11T10:00:00",
-        "Status": "Pendente"
+        "Status": 0
     },
     {
         "Id": 2,
         "Title": "Pagar contas",
         "Description": "Pagar todas as contas pendentes.",
         "CreatedDate": "2023-09-10T15:30:00",
-        "Status": "Concluída"
+        "Status": 2
     }
 ]
 ```
@@ -91,7 +91,7 @@ Corpo da Solicitação:
     "Title": "Ir à academia",
     "Description": "Fazer exercícios na academia.",
     "CreatedDate": "2023-09-12T08:00:00",
-    "Status": "Em Progresso"
+    "Status": 1
 }
 
 ```
@@ -105,7 +105,7 @@ Content-Type: application/json
     "Title": "Ir à academia",
     "Description": "Fazer exercícios na academia.",
     "CreatedDate": "2023-09-12T08:00:00",
-    "Status": "Em Progresso"
+    "Status": 1
 }
 
 ```
@@ -117,7 +117,7 @@ Resposta de Exemplo:
     "Title": "Ir à academia",
     "Description": "Fazer exercícios na academia.",
     "CreatedDate": "2023-09-12T08:00:00",
-    "Status": "Em Progresso"
+    "Status": 1
 }
 
 
@@ -136,7 +136,7 @@ Corpo da Solicitação:
     "Title": "Ir à academia - Atualizado",
     "Description": "Fazer exercícios na academia - Atualizado",
     "CreatedDate": "2023-09-12T08:00:00",
-    "Status": "Concluída"
+    "Status": 2
 }
 ```
 Exemplo de Solicitação:
@@ -149,7 +149,7 @@ Content-Type: application/json
     "Title": "Ir à academia - Atualizado",
     "Description": "Fazer exercícios na academia - Atualizado",
     "CreatedDate": "2023-09-12T08:00:00",
-    "Status": "Concluída"
+    "Status": 2
 }
 ```
 Resposta de Exemplo:
@@ -160,7 +160,7 @@ Resposta de Exemplo:
     "Title": "Ir à academia - Atualizado",
     "Description": "Fazer exercícios na academia - Atualizado",
     "CreatedDate": "2023-09-12T08:00:00",
-    "Status": "Concluída"
+    "Status": 2
 }
 ```
 
