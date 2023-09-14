@@ -26,6 +26,27 @@ Utilizei para o banco de dados o SqlServer, por isso a string de conexão deve s
   }
 ```
 
+## Tecnologias Utilizadas
+
+A seguir estão as principais tecnologias e ferramentas utilizadas neste projeto, juntamente com suas versões:
+
+- **Plataforma**: .NET 7.0
+- **ASP.NET Core 6**
+- **Entity Framework Core 7**
+- **SQL Server 16**
+
+
+## Como Executar o Projeto
+
+Para executar este projeto em sua máquina local, siga as etapas abaixo:
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/JoaoVitorAguiar/TaskManagerAsp.Net.git
+
+
+
 ## Modelos de Dados
 
 ### TarefaRegisterViewModel
