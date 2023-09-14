@@ -3,6 +3,28 @@
 Bem-vindo à documentação da API ASP.NET do TaskManager. Esta API permite gerenciar tarefas em uma aplicação de lista de afazeres. Ela oferece operações para listar, criar, atualizar e excluir tarefas.
 
 
+## CONFIGURAÇÃO
+
+Para testar esse projeto precisa baixar ele na sua máquina e fazer algumas alterações.
+
+Utilizei uma abordagem code first, ou seja, uma vez criado o modelo de dados e configurado o contextpo de dados, basta utilizar as migrações. Para isso o comando *update-database* no Package Manager console aplica essa migração.
+
+Utilizei para o banco de dados o SqlServer, por isso a string de conexão deve ser modificada de acordo com as configurações do seu dispositivo. Para modificá-la basta ir em *appsettings.json*. E adequar o *DefaultConnection*.
+```json
+{
+  
+    "ConnectionStrings": {
+      "DefaultConnection": "Data Source=ENIAC\\SQLEXPRESS;Initial Catalog=TaskManager;Integrated Security=True;TrustServerCertificate=True"
+    },
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "AllowedHosts": "*"
+  }
+```
 
 ## Modelos de Dados
 
@@ -32,8 +54,8 @@ Método: GET
 Descrição: Retorna uma lista de todas as tarefas disponíveis.
 
 Exemplo de Solicitação:
-```bash
-  GET https://seu-domínio.com/v1/Tarefas
+```http
+GET https://seu-domínio.com/v1/Tarefas
 ```
 Resposta de Exemplo:
 ```json
@@ -121,7 +143,6 @@ Exemplo de Solicitação:
 
 ```http
 PUT https://seu-domínio.com/v1/Tarefas/3
-Authorization: Bearer SUA_CHAVE_DE_API
 Content-Type: application/json
 
 {
