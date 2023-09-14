@@ -183,3 +183,10 @@ Resposta de Exemplo:
     "mensagem": "Tarefa excluída com sucesso."
 }
 ```
+
+## Erros
+A API pode retornar os seguintes códigos de erro:
+
+* 400 Bad Request: Quando a solicitação está ausente de dados obrigatórios ou contém dados inválidos.
+* 404 Not Found: Quando um recurso solicitado não existe.
+* 500 Internal Server Error: Para erros inesperados no servidor.
